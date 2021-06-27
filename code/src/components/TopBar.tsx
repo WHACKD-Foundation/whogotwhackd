@@ -12,7 +12,7 @@ export function TopBar() {
           <ToMain href="/">
             <span>Who's Getting WHACKD?</span>
             <ToMainBottom>
-              Your live WHACKD tracker
+              Thank you John
             </ToMainBottom>
           </ToMain>
           <HeaderNavLinks>
