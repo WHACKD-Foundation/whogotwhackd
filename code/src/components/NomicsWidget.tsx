@@ -6,6 +6,5 @@ export function NomicsWidget() {
     script.async = true;
     document.body.appendChild(script);
 
-    return (
-    <div className="nomics-ticker-widget" data-name="Whackd" data-base="WHACKD" data-quote="USD"></div>
-)}
+    return (<div className="nomics-ticker-widget" data-name="Whackd" data-base="WHACKD" data-quote="USD"></div>);
+}

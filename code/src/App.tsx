@@ -13,8 +13,8 @@ export function App() {
       <BrowserRouter>
         <TopBar />
         <Switch>
-          <Route exact path="/home" component={HomePage} />
-          <Redirect exact from="/" to="/home" />
+          <Route exact path="/" component={HomePage} />
+          <Redirect exact from="/" to="/" />
         </Switch>
       </BrowserRouter>
     </Page>
