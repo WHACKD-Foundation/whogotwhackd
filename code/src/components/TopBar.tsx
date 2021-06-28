@@ -11,9 +11,7 @@ export function TopBar() {
         <HeaderNav>
           <ToMain href="/">
             <span>Who's Getting WHACKD?</span>
-            <ToMainBottom>
-              Thank you John
-            </ToMainBottom>
+            <ToMainBottom>Thank you John</ToMainBottom>
           </ToMain>
           <HeaderNavLinks>
             <HeaderLink activeClassName="active-page" to="/home">
