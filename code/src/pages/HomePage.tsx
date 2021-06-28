@@ -12,6 +12,7 @@ import {
 import { Label } from '../typography/Label'
 import { TextInline } from '../typography/Text'
 import { Title } from '../typography/Title'
+import { NomicsWidget } from '../components/NomicsWidget'
 
 import WhackdAbiJson from '../abi/Whackd.json'
 
@@ -56,6 +57,7 @@ export function HomePage() {
                 <TextInline>{whackdCounter}</TextInline>
               </ContentRow>
             )}
+            <NomicsWidget></NomicsWidget>
           </ContentBlock>
         </Section>
       </Container>
