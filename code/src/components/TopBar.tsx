@@ -16,17 +16,9 @@ export function TopBar() {
             </ToMainBottom>
           </ToMain>
           <HeaderNavLinks>
-            <HeaderLink activeClassName="active-page" to="/balance">
+            <HeaderLink activeClassName="active-page" to="/home">
               {' '}
-              Balance{' '}
-            </HeaderLink>
-            <HeaderLink activeClassName="active-page" to="/prices">
-              {' '}
-              Prices{' '}
-            </HeaderLink>
-            <HeaderLink activeClassName="active-page" to="/block">
-              {' '}
-              Block{' '}
+              HomePage{' '}
             </HeaderLink>
           </HeaderNavLinks>
         </HeaderNav>

@@ -4,9 +4,7 @@ import { BrowserRouter } from 'react-router-dom'
 import { Page } from './components/base/base'
 import { TopBar } from './components/TopBar'
 import { GlobalStyle } from './global/GlobalStyle'
-import { Balance } from './pages/Balance'
-import { Prices } from './pages/Prices'
-import { Block } from './pages/Block'
+import { HomePage } from './pages/HomePage'
 
 export function App() {
   return (
@@ -15,10 +13,8 @@ export function App() {
       <BrowserRouter>
         <TopBar />
         <Switch>
-          <Route exact path="/balance" component={Balance} />
-          <Route exact path="/prices" component={Prices} />
-          <Route exact path="/block" component={Block} />
-          <Redirect exact from="/" to="/balance" />
+          <Route exact path="/home" component={HomePage} />
+          <Redirect exact from="/" to="/home" />
         </Switch>
       </BrowserRouter>
     </Page>

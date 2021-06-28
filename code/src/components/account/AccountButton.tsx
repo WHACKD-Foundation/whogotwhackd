@@ -4,11 +4,8 @@ import { Button } from '../base/Button'
 import { Colors } from '../../global/styles'
 import styled from 'styled-components'
 
-import { AccountModal } from './AccountModal'
-
 export const AccountButton = () => {
   const { account, deactivate, activateBrowserWallet } = useEthers()
-  const [showModal, setShowModal] = useState(false)
 
   const [activateError, setActivateError] = useState('')
   const { error } = useEthers()
@@ -26,10 +23,9 @@ export const AccountButton = () => {
   return (
     <Account>
       <ErrorWrapper>{activateError}</ErrorWrapper>
-      {showModal && <AccountModal setShowModal={setShowModal} />}
       {account ? (
         <Account>
-          <AccountLabel onClick={() => setShowModal(!showModal)}>{shortenAddress(account)}</AccountLabel>
+          <AccountLabel>{shortenAddress(account)}</AccountLabel>
           <LoginButton onClick={() => deactivate()}>Disconnect</LoginButton>
         </Account>
       ) : (
