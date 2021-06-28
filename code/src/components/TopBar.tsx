@@ -13,12 +13,6 @@ export function TopBar() {
             <span>Who's Getting WHACKD?</span>
             <ToMainBottom>Thank you John</ToMainBottom>
           </ToMain>
-          <HeaderNavLinks>
-            <HeaderLink activeClassName="active-page" to="/home">
-              {' '}
-              HomePage{' '}
-            </HeaderLink>
-          </HeaderNavLinks>
         </HeaderNav>
       </HeaderContainer>
     </Header>

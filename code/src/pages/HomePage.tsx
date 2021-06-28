@@ -46,17 +46,21 @@ export function HomePage() {
   return (
     <MainContent>
       <Container>
-        <Section>
-          <SectionRow>
-            <Title>Whackd Counter status</Title>
-          </SectionRow>
-          <ContentBlock>
-            {whackdCounter && (
+        {whackdCounter && (
+            <ContentBlock>
               <ContentRow>
                 <Label>Counter is at:</Label>{' '}
-                <TextInline>{whackdCounter}</TextInline>
+                <Title>{whackdCounter}</Title>
               </ContentRow>
+            </ContentBlock>
             )}
+        <Section>
+          <ContentBlock>
+            <p>WHACKED Contract: 0xCF8335727B776d190f9D15a54E6B9B9348439eEE</p>
+            <p>
+              Check out the recent transactions on: 
+              <a href="https://etherscan.io/token/0xcf8335727b776d190f9d15a54e6b9b9348439eee">Etherscan</a>
+            </p>
             <NomicsWidget></NomicsWidget>
           </ContentBlock>
         </Section>
