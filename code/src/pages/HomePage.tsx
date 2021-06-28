@@ -19,6 +19,7 @@ import { AccountButton } from '../components/account/AccountButton'
 import WhackdAbiJson from '../abi/Whackd.json'
 
 const WHACKD_CONTRACT = '0xCF8335727B776d190f9D15a54E6B9B9348439eEE'
+const ETHERSCAN_APIKEY = 'P5YRK927CQTPU1H1Q2S1FDS117JQR3CEKP';
 
 export function HomePage() {
   const { account } = useEthers()
@@ -26,10 +27,9 @@ export function HomePage() {
   const [whackdCounter, setCounter] = React.useState('0')
   const handleChange = (w: string) => setCounter(w)
 
-  let provider = new providers.EtherscanProvider()
+  let provider = new providers.EtherscanProvider(undefined, ETHERSCAN_APIKEY)
   const whackd = new Contract(WHACKD_CONTRACT, WhackdAbiJson, provider)
   whackd.on('Transfer', (from, to, amount, event) => {
-    console.log('Transfer happened')
     var storagePromise = provider.getStorageAt(WHACKD_CONTRACT, 6)
     storagePromise
       .then(function (result) {
