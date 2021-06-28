@@ -1,17 +1,25 @@
 {
-  "include": ["src", "types"],
   "compilerOptions": {
-    "module": "commonjs",
-    "target": "ES2018",
-    "moduleResolution": "node",
-    "esModuleInterop": true,
-    "jsx": "react",
-    "baseUrl": "./",
-    "strict": true,
+    "types": ["vite/client"],
+    "target": "ESNext",
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "allowJs": false,
     "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true,
-    "resolveJsonModule": true,
+    "esModuleInterop": false,
     "allowSyntheticDefaultImports": true,
-    "importsNotUsedAsValues": "error"
-  }
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react",
+    "rootDir": "./src",
+    "baseUrl": "src",
+    "paths": {
+      "@/*": ["./*"]
+    }
+  },
+  "include": ["./src"]
 }

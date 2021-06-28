@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { useEthers, shortenAddress } from '@usedapp/core'
+import { shortenAddress, useEthers } from '@usedapp/core'
 import { Button } from '../base/Button'
 import { Colors } from '../../global/styles'
 import styled from 'styled-components'

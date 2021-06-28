@@ -1,5 +1,11 @@
 import styled from 'styled-components'
-import { BorderRad, Colors, Gradients, Shadows, Sizes } from '../../global/styles'
+import {
+  BorderRad,
+  Colors,
+  Gradients,
+  Shadows,
+  Sizes
+} from '../../global/styles'
 import { Title } from '../../typography/Title'
 
 export const Page = styled.div`
