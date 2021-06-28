@@ -47,7 +47,7 @@ export function HomePage() {
       <Container>
         <Section>
           <SectionRow>
-            <Title>Balanced</Title>
+            <Title>Balance</Title>
             <AccountButton />
           </SectionRow>
           <ContentBlock>
