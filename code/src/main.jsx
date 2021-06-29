@@ -1,4 +1,8 @@
-import React from 'react'
+import './styles/index.css'
+import './styles/app.css'
+import './styles/tippy.css'
+
+import { StrictMode } from 'react'
 import ReactDOM from 'react-dom'
 import { ChainId, DAppProvider } from '@usedapp/core'
 import { App } from './App'
@@ -12,10 +16,10 @@ const config = {
 }
 
 ReactDOM.render(
-  <React.StrictMode>
+  <StrictMode>
     <DAppProvider config={config}>
       <App />
     </DAppProvider>
-  </React.StrictMode>,
+  </StrictMode>,
   document.getElementById('root')
 )

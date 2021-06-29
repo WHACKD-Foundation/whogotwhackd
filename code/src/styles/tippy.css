@@ -1,0 +1,14 @@
+@import 'tippy.js/dist/tippy.css';
+
+.tippy-box {
+  @apply bg-gray-900 shadow-md !important;
+  border-radius: 5px;
+}
+
+.tippy-arrow {
+  @apply text-gray-900 shadow-md !important;
+}
+
+.tippy-content {
+  @apply px-3 py-2.5 font-medium text-gray-100 text-sm !important;
+}
