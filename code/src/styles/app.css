@@ -1,0 +1,8 @@
+body {
+  background-image: url("/bg.jpg");
+  @apply bg-center bg-cover;
+}
+
+html {
+  @apply h-full;
+}

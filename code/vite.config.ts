@@ -10,9 +10,9 @@ export default defineConfig({
       '@': resolve(__dirname, '/src')
     }
   },
-  /*esbuild: {
+  esbuild: {
     jsxInject: `import React from 'react'`
-  },*/
+  },
   build: {
     target: 'es2018'
   }
