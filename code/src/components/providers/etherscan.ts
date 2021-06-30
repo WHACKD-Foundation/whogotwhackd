@@ -31,13 +31,12 @@ export function getWhackdCounter(callback: Function) {
 export function getWhackdSupply(callback: Function) {
   const supplyPromise = whackdContract.totalSupply()
   supplyPromise
-    .then(function (result) {
+    .then(function (result: BigNumber) {
       var supply = Math.round(parseInt(formatEther(result)))
       var burnedPercent = (((TOTAL_SUPPLY - supply) / TOTAL_SUPPLY) * 100).toFixed(3);
       callback(supply.toLocaleString(), burnedPercent.toString())
     })
-    .catch(function(error) {
+    .catch(function() {
       console.log('Error when updating supply')
-      console.log(error)
     })
 }

@@ -66,6 +66,11 @@ export default function HomePage() {
     getWhackdSupply(handleSupplyChange)
   }, 10000)
 
+  useEffect(() => {
+    getWhackdSupply(handleSupplyChange)
+  }, [])
+
+
   const copyToClipboard = useCopyToClipboard()[1]
 
   return (
