@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { useInterval } from '@usedapp/core'
-import { getWhackdCounter } from '@/components/providers/etherscan'
+import { getWhackdCounter, getWhackdSupply } from '@/components/providers/etherscan'
 import { NomicsWidget } from '@/components/NomicsWidget'
 import { motion } from 'framer-motion'
 import IconUniswap from '@/components/IconUniswap'
@@ -43,17 +43,33 @@ const CONTRACT = '0xCF8335727B776d190f9D15a54E6B9B9348439eEE'
 
 export default function HomePage() {
   let [whackdCounter, setCounter] = useState('0')
+  let [whackdSupply, setWhackdSupply] = useState('0')
+  let [burntPercentage, setBurntPercentage] = useState('0')
 
-  const handleChange = w => {
+  const handleCounterChange = w => {
     setCounter(w)
   }
+  const handleSupplyChange = (s, b) => {
+    setWhackdSupply(s)
+    setBurntPercentage(b)
+  }
+
   useInterval(() => {
-    getWhackdCounter(handleChange)
+    getWhackdCounter(handleCounterChange)
   }, 10000)
 
   useEffect(() => {
-    getWhackdCounter(handleChange)
+    getWhackdCounter(handleCounterChange)
   }, [])
+
+  useInterval(() => {
+    getWhackdSupply(handleSupplyChange)
+  }, 10000)
+
+  useEffect(() => {
+    getWhackdSupply(handleSupplyChange)
+  }, [])
+
 
   const copyToClipboard = useCopyToClipboard()[1]
 
@@ -102,6 +118,10 @@ export default function HomePage() {
 
       <div className="text-lg font-semibold text-gray-100">
         Transactions until next WHACK: {1000 - whackdCounter}
+      </div>
+
+      <div className="text-lg font-semibold text-gray-100">
+        Total supply of WHACKD: {whackdSupply} : {burntPercentage}% burned so far
       </div>
 
       <div className="w-full max-w-screen-sm">
