@@ -12,6 +12,8 @@
     "lint:prettier": "yarn prettier './{src, test}/**/*.{ts,tsx}'"
   },
   "dependencies": {
+    "@material-ui/core": "4.11.4",
+    "@material-ui/data-grid": "^4.0.0-alpha.33",
     "@netlify/classnames-template-literals": "^1.0.0",
     "@tippyjs/react": "^4.2.5",
     "@types/styled-components": "^5.1.10",

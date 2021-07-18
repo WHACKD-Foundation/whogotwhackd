@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { useInterval } from '@usedapp/core'
 import { getWhackdCounter, getWhackdSupply } from '@/components/providers/etherscan'
 import { NomicsWidget } from '@/components/NomicsWidget'
+import WhackdTransactions from '@/components/WhackdTransactions'
 import { motion } from 'framer-motion'
 import IconUniswap from '@/components/IconUniswap'
 import ctl from '@netlify/classnames-template-literals'
@@ -126,6 +127,10 @@ export default function HomePage() {
 
       <div className="w-full max-w-screen-sm">
         <NomicsWidget />
+      </div>
+
+      <div className="w-full max-w-screen-sm">
+        <WhackdTransactions />
       </div>
 
       <div className="py-5">
