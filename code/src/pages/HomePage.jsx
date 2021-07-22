@@ -79,7 +79,7 @@ export default function HomePage() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         alt="Whackd logo"
-        src="/logo.png"
+        src="/whackd.gif"
         className="w-64 h-64"
       />
       <div className="mt-5 text-7xl font-extrabold tracking-tight text-gray-100 leading-none">
