@@ -29,16 +29,18 @@ export default function TopBar() {
         >
           Home
         </NavLink>
-        <NavLink
-          to="/howtobuy"
-          className={navitem(pathname === '/howtobuy')}
-          activeClassName="border-white"
-        >
-          How to Buy
-        </NavLink>
 
         <a
-          href="https://twitter.com/whackdbiz"
+          href="https://linktr.ee/WHACKD"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={navitem(false)}
+        >
+          More Information
+        </a>
+
+        <a
+          href="https://twitter.com/TokenWhackd?s=09"
           target="_blank"
           rel="noopener noreferrer"
         >
